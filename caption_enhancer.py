@@ -33,5 +33,5 @@ Make the caption more descriptive and natural. Reply with only the new enhanced 
             capture_output=True
         )
 
-        enhanced_caption = result.stdout.decode().strip('"')
+        enhanced_caption = result.stdout.decode().strip().replace('"', '')
         return enhanced_caption
