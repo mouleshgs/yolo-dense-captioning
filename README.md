@@ -39,7 +39,7 @@ yolo-dense-captioning/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/yolo-dense-captioning.git
+git clone https://github.com/mouleshgs/yolo-dense-captioning.git
 cd yolo-dense-captioning
 ```
 
@@ -83,7 +83,7 @@ The webcam will open, and you'll see live object detection with an enhanced capt
 
 - The LLaMA 3 model runs locally via Ollama. Ensure Ollama is properly installed and accessible from your system PATH.
 - Caption generation is based on `microsoft/git-base` and may vary depending on image clarity.
-- For faster inference, you can use a quantized model like `llama3:8b-q4_K_M`.
+- For faster inference, you can use a optimized model like `llama3.1` or `llama3.2`.
 
 ---
 
