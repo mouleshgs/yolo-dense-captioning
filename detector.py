@@ -33,4 +33,4 @@ class YOLODetector:
             if conf > 0.5:
                 labels.append(label)
 
-        return list(set(labels))  # Unique labels
+        return list(set(labels))  
