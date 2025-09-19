@@ -21,7 +21,7 @@ class CaptionModel:
         inputs = self.processor(images=image_pil, return_tensors="pt").to(self.device)
 
         with torch.no_grad():
-            output = self.model.generate(**inputs, max_new_tokens=30)
+            output = self.model.generate(**inputs, max_new_tokens=50)
 
         caption = self.processor.batch_decode(output, skip_special_tokens=True)[0].strip()
         end = time.time()

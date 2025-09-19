@@ -9,7 +9,7 @@ from caption_enhancer import CaptionEnhancer
 # Initialize modules
 detector = YOLODetector()
 captioner = CaptionModel()
-enhancer = CaptionEnhancer("llama3.2") 
+enhancer = CaptionEnhancer() 
 
 # Setup webcam
 cap = cv2.VideoCapture(0)

@@ -3,19 +3,18 @@
 import subprocess
 import json
 
-import shutil
-print("Ollama path:", shutil.which("ollama"))
+# import shutil
+# print("Ollama path:", shutil.which("ollama"))
 
 
 class CaptionEnhancer:
-    def __init__(self, model_name="llama3"):
+    def __init__(self, model_name="llama2-mini"):
         self.model = model_name
 
     def enhance(self, base_caption, detected_objects):
         object_str = ", ".join(detected_objects)
-
         prompt = f"""
-You are a image captioner . Enhance the following caption based on the list of detected objects.
+You are an expert image captioner. Enhance the following caption by incorporating the detected objects naturally and making it more vivid and descriptive.
 
 Base caption:
 "{base_caption}"
@@ -23,8 +22,9 @@ Base caption:
 Detected objects:
 {object_str}
 
-Make the caption more descriptive and natural. Reply with only the new enhanced caption. Don't add extra details.
+Generate a single enhanced caption that is natural, fluent, and descriptive. Include the objects appropriately. Reply with only the enhanced caption, without extra explanations, instructions, or formatting.
 """
+
 
         # Run Ollama chat command
         result = subprocess.run(
