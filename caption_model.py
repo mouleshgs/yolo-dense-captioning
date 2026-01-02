@@ -12,7 +12,7 @@ class CaptionModel:
 
         print("[INFO] Warming up GIT-Base caption model...")
         _ = self.caption(Image.new("RGB", (224, 224)))
-        print("[INFO] Warm-up complete ✅")
+        print("[INFO] Warm-up complete ")
 
     def caption(self, image_pil):
         start = time.time()
