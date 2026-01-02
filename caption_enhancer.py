@@ -8,7 +8,7 @@ import json
 
 
 class CaptionEnhancer:
-    def __init__(self, model_name="llama2-mini"):
+    def __init__(self, model_name="llama3.2:latest"):
         self.model = model_name
 
     def enhance(self, base_caption, detected_objects):
@@ -25,7 +25,7 @@ Detected objects:
 Generate a single enhanced caption that is natural, fluent, and descriptive. Include the objects appropriately. Reply with only the enhanced caption, without extra explanations, instructions, or formatting.
 """
 
-
+        print("ollama running!!")
         # Run Ollama chat command
         result = subprocess.run(
             ["ollama", "run", self.model],
